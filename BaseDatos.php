@@ -1,97 +1,97 @@
-<? php 
+<?php 
 
-class  BaseDatos {
+class BaseDatos {
 
-    public  $ usuarioBD = "root" ;
-    public  $ passwordBD = "" ;
+    public $usuarioBD="root";
+    public $passwordBD="";
 
-     función  pública __construct () {}
+    public function __construct(){}
 
-     función  pública conectarBD () {
+    public function conectarBD(){
 
-        prueba {
+        try{
 
-            $ datosBD = "mysql: host = localhost; nombrebd = tiendacpc" ;
-            $ conexion = nuevo  PDO ( $ datosBD , $ this -> usuarioBD , $ this -> passwordBD );
-            echo("conectado con exito");
-            retorno ( $ conexion );
+            $datosBD="mysql:host=localhost;dbname=tiendacpc";
+            $conexion= new PDO($datosBD, $this->usuarioBD, $this->passwordBD);
+            echo("conexion exitosa");
+            return ($conexion);
 
-        } catch ( PDOException  $ error ) {
+        }catch(PDOException $error ){
 
-            echo ( $ error -> getMessage ());
+            echo($error->getMessage());
         }
     }
 
-     función  pública agregarDatos ( $ consultaSQL ) {
+    public function agregarDatos($consultaSQL){
 
-        $ conexionBD = $ esto -> conectarBD ();
-        $ insercionRegistro = $ conexionBD -> preparar ( $ consultaSQL );
+        $conexionBD=$this->conectarBD();
+        $insercionRegistro=$conexionBD->prepare($consultaSQL);
 
-        $ resultado = $ insercionRegistro -> ejecutar ();
+        $resultado=$insercionRegistro->execute();
 
-        if ( $ resultado ) {
+        if($resultado){
 
-            echo ( "exito agregando el registro" );
+            echo("exito agregando el registro");
 
-        } más {
+        }else{
 
-            echo ( "error agregando el registro" );
-        }
-
-    }
-
-     función  pública consultarDatos ( $ consultaSQL ) {
-
-        $ conexionBD = $ esto -> conectarBD ();
-        $ buscarRegistros = $ conexionBD -> preparar ( $ consultaSQL );
-
-        $ buscarRegistros -> setFetchMode ( PDO :: FETCH_ASSOC );
-
-        $ resultado = $ buscarRegistros -> ejecutar ();
-
-        if ( $ resultado ) {
-           return ( $ buscarRegistros -> fetchAll ());
-        } más {
-            echo ( "error" );
+            echo("error agregando el registro");
         }
 
     }
 
-     función  pública eliminarDatos ( $ consultaSQL ) {
+    public function consultarDatos($consultaSQL){
 
-        $ conexionBD = $ esto -> conectarBD ();
+        $conexionBD=$this->conectarBD();
+        $buscarRegistros=$conexionBD->prepare($consultaSQL);
 
-        $ eliminarRegistro = $ conexionBD -> preparar ( $ consultaSQL );
+        $buscarRegistros->setFetchMode(PDO::FETCH_ASSOC);
 
-        $ resultado = $ eliminarRegistro -> ejecutar ();
+        $resultado=$buscarRegistros->execute();
 
-        if ( $ resultado ) {
-
-            echo ( "exito eliminando el registro" );
-
-        } más {
-
-            echo ( "error eliminando el registro" );
+        if($resultado){
+           return($buscarRegistros->fetchAll());
+        }else{
+            echo("error");
         }
 
     }
 
-     función  pública actualizarDatos ( $ consultaSQL ) {
+    public function eliminarDatos($consultaSQL){
 
-        $ conexionBD = $ esto -> conectarBD ();
+        $conexionBD=$this->conectarBD();
+        
+        $eliminarRegistro=$conexionBD->prepare($consultaSQL);
 
+        $resultado=$eliminarRegistro->execute();
 
-        $ editarRegistro = $ conexionBD -> preparar ( $ consultaSQL );
+        if($resultado){
 
-        $ resultado = $ editarRegistro -> ejecutar ();
+            echo("exito eliminando el registro");
 
-        if ( $ resultado ) {
+        }else{
 
-            echo ( "exito editando el registro" );
+            echo("error eliminando el registro");
+        }
 
-        } más {
+    }
 
-            echo ( "error editando el registro" );
+    public function actualizarDatos($consultaSQL){
+
+        $conexionBD=$this->conectarBD();
+        
+        
+        $editarRegistro=$conexionBD->prepare($consultaSQL);
+
+        $resultado=$editarRegistro->execute();
+
+        if($resultado){
+
+            echo("exito editando el registro");
+
+        }else{
+
+            echo("error editando el registro");
         }
 
 
@@ -100,7 +100,7 @@ class  BaseDatos {
 
 
 
-
+    
 }
 
 
@@ -108,4 +108,4 @@ class  BaseDatos {
 
 
 
-?> 
+?>

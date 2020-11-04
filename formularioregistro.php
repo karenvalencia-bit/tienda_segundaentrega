@@ -35,7 +35,7 @@ DULCE TENTACION
     </div>
   </nav>
 </header>
-<main>
+<main class="fondomain">
 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -58,14 +58,14 @@ DULCE TENTACION
   </a>
 </div>
 
-<div class="container fondo mt-5">
+<div class="container fondo ">
 <h1 class=" justify-content-center mt-5" >FORMULARIO DE REGISTRO PRODUCTOS</h1>
 
 <form class="fondo" action="registrarproductos.php" method="POST">
 
   <div class="form-group mt-5 row justify-content-center">
 
-    <label for="codigo" class="col-sm-2 col-form-label justify-content-center">codigo del producto</label>
+  <label for="codigo" class="col-sm-2 col-form-label justify-content-center mt-4">codigo del producto</label>
     <div class="col-sm-6">
       <input type="number" class="form-control mt-4"  placeholder="codigo" name="codigo">
     </div>
@@ -82,51 +82,59 @@ DULCE TENTACION
       <input type="number" class="form-control" placeholder="precio" name="precio">
     </div>
   </div>
-  
+
+  <div class="form-group row justify-content-center">
+    <label for="descripcion" class="col-sm-2 col-form-label ">descripcion del producto</label>
+    <div class="col-sm-6">
+        <textarea class="form-control" name="descripcion" placeholder="breve descripcion" rows="3"></textarea>
+      </div>
+  </div>
+
+     
     <div class="row justify-content-center">
       <legend class="col-form-label col-sm-2 pt-0 ">marca</legend>
       <div class="col-sm-6">
         <div class="form-check ">
-          <input class="form-check-input " type="radio" name="gridRadios" id="gridRadios1" value="option1" checked >
+          <input class="form-check-input " type="radio" name="marca"  value="deli.SAS" checked >
           <label class="form-check-label " for="gridRadios1">
             deli.SAS
           </label>
         </div>
         <div class="form-check justify-content-center">
-          <input class="form-check-input " type="radio" name="gridRadios" id="gridRadios2" value="option2">
+          <input class="form-check-input " type="radio" name="marca"  value="maria luisa">
           <label class="form-check-label " for="gridRadios2">
             maria luisa
           </label>
         </div>
         <div class="form-check justify-content-center">
-          <input class="form-check-input " type="radio" name="gridRadios" id="gridRadios2" value="option2">
+          <input class="form-check-input " type="radio" name="marca"  value="tortas exito">
           <label class="form-check-label " for="gridRadios2">
             tortas exito
           </label>
         </div>
 
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+          <input class="form-check-input" type="radio" name="marca"  value="postres, dulces, tortas de la casa (dulce tenatacion)">
           <label class="form-check-label" for="gridRadios2">
             postres, dulces, tortas de la casa (dulce tenatacion)
           </label>
           </div>
 
-          <div class="form-group row justify-content-center">
-    <label for="text" class="col-sm-2 col-form-label mt-4 ">descripcion del producto</label>
-    <div class="col-sm-6">
-      <input type="name" class="form-control mt-4" placeholder="descripcion" name="descripcion">
-    </div>
-  </div>
+          
 
   <div class="form-group row justify-content-center">
     <div class="col-sm-10">
-      <button type="submit" class="btn btn-primary  btn-block mt-5">registrar</button>
+      <button type="submit" class="btn btn-primary  btn-block mt-5" name="boton">registrar</button>
     </div>
   </div>
+
+</div>
 </form>
 
 </div>
+
+
+
 </div>
 </main>
 <footer>
