@@ -14,13 +14,13 @@ if(isset($_POST["boton"])){
 
 
     $operacionBD= new BaseDatos();
-    $operacionBD->conectarBD();
+    //$operacionBD->conectarBD();
 
 
    
-    $consultaSQL="INSERT INTO productos(codigo,nombre, marca, descripcion, precio) VALUES ('$codigo','$nombre','$marca','$descripcion','$precio')";
+    $consultaSQL="INSERT INTO productos( codigo, nombre, marca, descripcion, precio) VALUES ('$codigo','$nombre','$marca','$descripcion','$precio')";
  
-    $operacionBD->registroexitoso($consultaSQL);
+    $operacionBD->agregarDatos($consultaSQL);
 
     
     

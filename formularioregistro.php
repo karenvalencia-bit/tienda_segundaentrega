@@ -24,11 +24,14 @@ DULCE TENTACION
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="formularioregistro.php">inicio <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="index.html">inicio <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="compra.php">compras<span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="formularioregistro.php">formulario<span class="sr-only">(current)</span></a>
         </li>
+        <li class="nav-item active">
+                      <a class="nav-link" href="listadoProductos.php">consultar datos<span class="sr-only">(current)</span></a>
+                    </li>
       </ul>
       
       
