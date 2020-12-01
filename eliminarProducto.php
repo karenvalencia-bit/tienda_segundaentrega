@@ -10,4 +10,5 @@ $consultaSQL="DELETE FROM productos WHERE id='$id'";
 
 $operacion->eliminarDatos($consultaSQL);
 
+header("location:listadoProductos.php");
 ?>

@@ -13,7 +13,7 @@ class BaseDatos {
 
             $datosBD="mysql:host=localhost;dbname=tiendacpc";
             $conexion= new PDO($datosBD, $this->usuarioBD, $this->passwordBD);
-            echo("conexion exitosa");
+           // echo("conexion exitosa");
             return ($conexion);
 
         }catch(PDOException $error ){

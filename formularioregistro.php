@@ -92,6 +92,12 @@ DULCE TENTACION
         <textarea class="form-control" name="descripcion" placeholder="breve descripcion" rows="3"></textarea>
       </div>
   </div>
+  <div class="form-group row justify-content-center">
+    <label for="foto" class="col-sm-2 col-form-label ">imagen producto</label>
+    <div class="col-sm-6">
+    <input type="text" class="form-control" placeholder="URL FOTO" name="foto">
+      </div>
+  </div>
 
      
     <div class="row justify-content-center">

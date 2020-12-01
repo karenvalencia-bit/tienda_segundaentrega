@@ -12,6 +12,7 @@ h1{
 .img1{
     width: 500px;
     height: 350px;
+    
 }
 .ht{
     color: rgb(119, 82, 22);
@@ -19,4 +20,14 @@ h1{
 .alineado{
     text-align: center;
 }
+h1{
+    color: aqua;
+}
+.letra{
+    color: rgb(195, 113, 4);
+    align-content: center;
+    justify-self: start;
+    font-size: 20px;
+    font-style: italic;
+    text-align: justify;
 }
