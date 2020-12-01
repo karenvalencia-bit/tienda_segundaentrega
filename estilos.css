@@ -3,7 +3,7 @@
 }
 h1{
     
-        color: rgb(250, 245, 245);
+        color: rgb(139, 0, 121);
         text-align: center;
 }
 .fondomain{
@@ -20,9 +20,7 @@ h1{
 .alineado{
     text-align: center;
 }
-h1{
-    color: aqua;
-}
+
 .letra{
     color: rgb(195, 113, 4);
     align-content: center;
